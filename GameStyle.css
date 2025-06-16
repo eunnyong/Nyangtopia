@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Galmuri9';
+  src: url('font/Galmuri9.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Galmuri9';
+  margin: 0;
+  padding: 0;
+  background-color: #EDE4D4;
+  overflow: hidden;
+}
+
+.background-wrapper {
+  background-image: url('img/cat_background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.game-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.profile {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 25vw;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.cat {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70vh;
+  max-height: 56.25rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.happiness-container {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  z-index: 10;
+}
+
+.happiness-bar {
+  position: relative;
+  width: 50vw;
+  max-width: 62.5rem;
+  height: 3.5vh;
+  max-height: 2.5rem;
+  background-color: #FFF8E8;
+  border: 0.25rem solid #4B2F10;
+  border-radius: 5vh;
+  overflow: hidden;
+}
+
+.happiness-fill {
+  height: 100%;
+  width: 60%;
+  background-color: #F38787;
+  transition: width 0.3s;
+}
+
+.happiness-bar-label {
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #292626;
+  white-space: nowrap;
+}
+
+.dialog-wrapper {
+  position: absolute;
+  bottom: 1.875rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 106.25rem;
+  z-index: 10;
+}
+
+.dialog-box {
+  background-color: rgba(248, 242, 231, 0.75);
+  border: 0.315rem solid #C6B697;
+  border-radius: 1.25rem;
+  padding: 2rem 1.25rem;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.625rem;
+  height: 15vh;
+  min-height: 5rem;
+  max-height: 10.625rem;
+  color: #4B2F10;
+}
+
+.dialog-text {
+  padding: 0.3125rem 2.5rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.coin-box {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 0.625rem;
+  background-color: #F6EDE4;
+  padding: 0.75rem 0.875rem;
+  border: 0.18rem solid #4B2F10;
+  border-radius: 1.25rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.coin-icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: block;
+  object-fit: contain;
+}
+
+.choices {
+  display: flex;
+  justify-content: right;
+  gap: 2.5rem;
+  font-weight: 500;
+  margin-top: auto;
+  font-size: 1.8rem;
+}
+
+.choice {
+  cursor: pointer;
+  padding: 0rem 0.75rem;
+  border-radius: 0.3125rem;
+}
+
+.choice:hover {
+  color: red;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  gap: 15rem;
+  z-index: 10000;
+}
+
+.btn {
+  padding: 0.7rem 3rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-family: 'Galmuri9';
+}
+
+.btn-web {
+  color: #fff;
+  background-color: #000;
+}
+
+.btn-web:hover {
+  color: gray;
+}

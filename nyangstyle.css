@@ -1,0 +1,734 @@
+/*=================RESET=================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#wrap {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*=================RESET=================*/
+/*===================섹션=====================*/
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    text-align: center;
+}
+
+section:nth-child(1) {
+    /*메인페이지*/
+    background: #E6E4E2;
+    color: black;
+
+}
+
+section:nth-child(2) {
+    background: #E6E4E2;
+    color: black;
+}
+
+section:nth-child(3) {
+    /*고양이를키우는게쉬울거라생각했나요*/
+    background: #E6E4E2;
+    color: black;
+}
+
+section:nth-child(4) {
+    /*냥토피아는~*/
+    background: #E6E4E2;
+    color: black;
+}
+
+section:nth-child(5) {
+    /*모달창~*/
+    background: rgb(39, 36, 36);
+    color: white;
+}
+
+section:nth-child(6) {
+    /*슬라이드~*/
+    background: #E6E4E2;
+    color: black;
+}
+
+section:nth-child(7) {
+    background: #E6E4E2;
+    color: black;
+}
+
+
+
+
+/*===================섹션=====================*/
+
+
+/*============== 헤더 ==========================*/
+header {
+    position: fixed;
+    top: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    height: 8%;
+    max-width: 1400px;
+    background: rgba(56, 56, 56, 0.5);
+    border-radius: 2em;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    font-family: Galmuri9;
+    color: white;
+}
+
+header img {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+header ul {
+    display: flex;
+    gap: 3vw;
+    font-size: 1em;
+}
+
+/*============== 헤더 ==========================*/
+
+
+/*===================메인페이지1=====================*/
+.mainpage {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-top {
+    width: 100%;
+    background: rgb(39, 36, 36);
+    color: white;
+    padding: 1em 1em;
+    margin-top: calc(5vh + 2em);
+    margin-bottom: 1em;
+    text-align: center;
+
+}
+
+.main-top img {
+    width: min(30vw, 240px);
+    height: auto;
+    margin: 1.5rem auto;
+    display: block;
+}
+
+.main-top h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    margin-top: 1em;
+}
+
+/*===================메인페이지 돼지슬라이더=====================*/
+.main-slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-inner {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.slider-inner img {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/*===================메인페이지 돼지슬라이더=====================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===================메인페이지2(고양이를키우는게쉬울거라생각햇나)=====================*/
+
+.subpage-a {
+    height: 100vh;
+    padding: 2.8em;
+}
+
+.subpage-a-text {
+    font-size: 2rem;
+    font-family: Galmuri9;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+}
+
+.subpage-a-slider1,
+.subpage-a-slider2 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.subpage-a-slider1 {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    animation: scroll 30s linear infinite;
+}
+
+
+.subpage-a-slider1,
+.subpage-a-slider2 img {
+    height: 200px;
+    flex-shrink: 0;
+}
+
+
+.subpage-a-slider2 {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    animation: scroll2 30s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+
+
+/*===================메인페이지2(고양이를키우는게쉬울거라생각햇나)=====================*/
+
+/*===================메인페이지3(냥토피아는~)=====================*/
+
+.subpage-b {
+    display: flex;
+    font-size: 1rem;
+    max-width: 1920px;
+    padding: 8em;
+    padding-right: 2em;
+    height: 100vh;
+    width: 80%;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.left {
+    background: #F0EEE7;
+    box-shadow: 1px 1px 15px rgb(144, 134, 129);
+    border: 1px solid white;
+    border-radius: 50%;
+    width: min(60vw, 350px);
+    aspect-ratio: 1 / 1;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1rem; */
+    top: 50%;
+    transform: translateX(10%);
+
+
+}
+
+
+.left li {
+    position: absolute;
+    z-index: 1;
+    width: 10vw;
+    height: 10vw;
+    background: rgb(245, 245, 245);
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-family: Galmuri9;
+    color: black;
+    aspect-ratio: 1 / 1;
+    gap: 0.2rem;
+    padding: 0.5rem;
+}
+
+.left>img {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+.left li img {
+    position: static;
+    width: 30%;
+    height: auto;
+    margin-bottom: 0.2rem;
+}
+
+.left li:nth-child(1) {
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.left li:nth-child(2) {
+    top: 75%;
+    left: -5%;
+    transform: translate(0, -50%);
+}
+
+.left li:nth-child(3) {
+    top: 75%;
+    left: 105%;
+    transform: translate(-100%, -50%);
+}
+
+
+.subpage-b-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5em;
+    color: #222;
+    width: 100%;
+
+}
+
+.subpage-b-right div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.subpage-b-right strong,
+p {
+    color: black;
+}
+
+.subpage-b-right strong {
+    margin-bottom: 2em;
+    font-size: 3em;
+}
+
+
+.subpage-b-right p {
+    padding: 1em;
+
+}
+
+.subpage-b-right span {
+    background: white;
+    color: black;
+    border-radius: 15px;
+    padding: 0.5rem;
+
+}
+
+.subpage-b-right img {
+    width: 10px;
+}
+
+
+/*===================메인페이지3(냥토피아는~)=====================*/
+
+/*===================메인페이지4(선택지도식화=====================*/
+.subpage-c {
+    height: 100vh;
+    position: relative;
+    padding: 3em;
+
+}
+
+.subpage-c-text {
+    width: 100%;
+}
+
+.subpage-c p {
+    display: flex;
+    color: white;
+    /* 위 오른 아래 왼 */
+}
+
+.subpage-c-title {
+    /*당신의의지와관계없이,*/
+    font-family: Galmuri9;
+    font-size: 2rem;
+}
+
+.subpage-c-var {
+    /*버튼을클릭하면 각선택에따른게임엔딩을*/
+    color: rgb(210, 210, 210);
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: -0.05em;
+    padding-bottom: 1rem;
+}
+
+.subpage-c-left {
+    /*다시뽑는다 키운다*/
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: white;
+    gap: 1rem;
+}
+
+.subpage-c-left button {
+    background-color: white;
+    width: clamp(6.25rem, 10vw, 12.5rem);
+    height: clamp(2.5rem, 4vh, 5rem);
+    font-size: 0.8rem;
+    font-family: Galmuri9;
+    cursor: pointer;
+}
+
+
+
+.subpage-c-btn {
+    background-color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subpage-c-btn:hover {
+    background-color: #ddd;
+}
+
+/* ---------------- 모달 ---------------- */
+
+.subpage-c-modal {
+    display: none;
+    background-color: rgba(68, 68, 68, 1);
+    border-radius: 0.6rem;
+    border: 1px solid grey;
+    padding: 1em;
+    width: 60%;
+}
+
+.modal-coin,
+.modal-love {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+}
+
+.modal-coin span,
+.modal-love span {
+    font-size: 1.5rem;
+}
+
+.modal-coin p,
+.modal-love p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.modal-coin p:nth-of-type(2),
+.modal-love p:nth-of-type(2) {
+    margin-left: auto;
+}
+
+.coin-range,
+.love-range,
+input[type=range] {
+    width: 100%;
+    height: 0.6rem;
+    background: #ccc;
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    margin-top: 0.5em;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    background: #ccc;
+    border-radius: 0.25rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -0.4em;
+}
+
+.coin-range::-webkit-slider-thumb,
+input[type=range].coin-range::-webkit-slider-thumb {
+    background: gold;
+}
+
+.love-range::-webkit-slider-thumb,
+input[type=range].love-range::-webkit-slider-thumb {
+    background: crimson;
+
+}
+
+.subpage-c-modal button {
+    background-color: white;
+    color: black;
+    font-family: 'Galmuri9';
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 8em;
+    right: 3em;
+    width: 250px;
+    height: 250px;
+    background-color: #555;
+    border-radius: 50%;
+    color: white;
+    font-family: 'Galmuri9';
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    line-height: 1.4;
+    z-index: 10;
+    flex-direction: column;
+}
+
+.modal-result.gameover {
+    background-color: red;
+}
+
+
+
+
+/*-----모달창-----------*/
+/*===================메인페이지4(선택지도식화모달창)=====================*/
+
+
+
+/*===================메인페이지5(게임요소 슬라이드)=====================*/
+ .subpage-d-slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .subpage-d-slider-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+      height: 100%;
+      width: 300vw;
+      transform: translateX(0);
+    }
+
+    .subpage-d {
+    transform: translateX(1920px);
+      flex: 0 0 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #E6E4E2;
+      font-family: 'Galmuri9', sans-serif;
+      padding-left: 10vw;
+      padding-right: 7vw;
+    }
+
+    .subpage-d-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 0.8rem;
+    }
+
+    .main-text {
+      font-size: 2.8rem;
+      line-height: 1.4;
+      color: #000;
+      text-align: left;
+    }
+
+    .sub-text {
+      font-size: 1rem;
+      color: #444;
+      margin-top: 1rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .subpage-d-right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .subpage-d-right img {
+      max-width: 90%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 1rem;
+    }
+
+    #prevSlide,
+    #nextSlide {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.3);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #prevSlide { left: 1rem; }
+    #nextSlide { right: 1rem; }
+
+
+
+
+
+
+/*===================메인페이지5(게임요소 슬라이드)=====================*/
+
+
+/*===================메인페이지6=====================*/
+
+.subpage-e {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    /* 화면 높이만큼 확보 */
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    transform: translateY(20rem);
+}
+
+.textlogo {
+    width: 300px;
+    height: auto;
+}
+
+.subpage-e p {
+    font-size: 1.5rem;
+    /* 적절한 크기로 조절 */
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* .fakefooter 자체를 화면 하단으로 밀기 */
+.fakefooter {
+    margin-top: auto;
+    /* 위쪽 여유 공간 모두 차지하게 함 */
+    width: 100%;
+}
+
+/* 푸터 이미지 블록으로 처리하여 하단에 정확히 붙도록 */
+.fakefooter img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/*===================메인페이지6=====================*/

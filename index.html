@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyangtopia</title>
+    <link href="fonts/Galmuri9.woff2" rel="Galmuri9">
+    <style>
+        @font-face {
+            font-family: 'Galmuri9';
+            src: url('fonts/Galmuri9.woff2') format('woff2');
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            background: black;
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            gap: 15rem;
+        }
+
+        .btn {
+            padding: 0.7rem 3rem;
+            font-size: 2rem;
+            border: none;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            font-family: 'Galmuri9';
+
+        }
+
+        .btn-play {
+            background-color: #FFF3E4;
+            color: #8D5F4C;
+            border: solid 0.2rem #6B3700;
+        }
+
+        .btn-play:hover {
+            background-color: #c9bfb3;
+        }
+
+        .btn-over {
+            background-color: #EC6262;
+            color: #6E1010;
+            border: solid 0.2rem #B32828;
+        }
+
+        .btn-over:hover {
+            background-color: #ab4646;
+        }
+    </style>
+</head>
+
+<body>
+
+    <video id="myVideo" autoplay muted>
+        <source src="img/trailer.mp4" type="video/mp4">
+        브라우저가 비디오 태그를 지원하지 않습니다.
+    </video>
+
+    <div class="button-container" id="buttons">
+        <button class="btn btn-play" onclick="location.href='Game.html'">키우기</button>
+        <button class="btn btn-over" onclick="location.href='gameover.html'">다시 뽑기</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('myVideo');
+        const buttons = document.getElementById('buttons');
+
+        video.muted = true;
+        video.play().catch(err => {
+            console.log('자동재생 차단됨:', err);
+        });
+
+        window.addEventListener('click', () => {
+            if (video.muted) {
+                video.muted = false;
+                video.play().catch(err => {
+                    console.log('사용자 클릭 후 재생 실패:', err);
+                });
+            }
+        }, { once: true });
+
+        video.addEventListener('ended', () => {
+            buttons.style.display = 'flex';
+        });
+    </script>
+
+</body>
+
+</html>

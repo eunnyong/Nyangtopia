@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyangtopia</title>
+    <link rel="stylesheet" href="GameStyle.css" />
+</head>
+
+<body>
+    <audio id="sfx-coin" src="sound/coin.mp3"></audio>
+    <audio id="sfx-happy-up" src="sound/happy.mp3"></audio>
+    <audio id="sfx-happy-down" src="sound/unhappy.mp3"></audio>
+
+    <video id="ending-video"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 9999;"
+        autoplay muted>
+        <source src="video/cat_ending.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <div class="background-wrapper">
+        <div class="game-wrapper">
+
+            <!-- 좌측 상단 고양이 프로필 -->
+            <img src="img/cat_profile.png" class="profile" alt="고양이 프로필" />
+            <!-- 고양이 -->
+            <img src="img/cat_nomal.png" class="cat" alt="고양이" />
+            <!-- 행복도 -->
+            <div class="happiness-container">
+                <div class="happiness-bar">
+                    <div class="happiness-fill" id="happy-bar"></div>
+                </div>
+                <div class="happiness-bar-label">행복도 ♥</div>
+            </div>
+
+            <div class="dialog-wrapper">
+                <!-- 코인 -->
+                <div class="coin-box">
+                    <img src="img/cat_coin.png" alt="코인" class="coin-icon" />
+                    <span id="money">1,000,000</span>
+                </div>
+
+                <!-- 대사창 -->
+                <div class="dialog-box">
+                    <div class="dialog-text" id="event-text"></div>
+                    <div class="choices" id="choices"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container" id="ending-buttons" style="display: none;">
+        <button class="btn btn-web" onclick="location.href='web.html'">다른 스토리 보러 가기</button>
+    </div>
+
+    <script src="GameScript.js"></script>
+</body>
+
+</html>

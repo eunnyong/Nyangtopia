@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyangtopia</title>
+    <link rel="stylesheet" href="nyangstyle.css" />
+    <link href="fonts/Galmuri9.woff2" rel="Galmuri9">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+
+<body>
+    <div id="wrap">
+        <header>
+            <img src="img/catlogo.png" alt="catlogo">
+            <ul>
+                <li><a href="web.html">소개글</a></li>
+                <li><a href="Game.html">게임</a></li>
+                <li><a href="index.html">처음으로</a></li>
+            </ul>
+        </header>
+
+
+
+
+
+        <div class="container">
+            <section>
+                <div class="mainpage">
+                    <div class="main-top">
+                        <img src="img/textlogo.png" alt="textlogo">
+                        <h3>잘 키울 수 있을 거라고 생각했나요?</h3>
+                    </div>
+
+                    <div class="main-slider">
+                        <div class="slider-inner">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                            <img src="img/pigcat.png" alt="pigcat">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+
+
+
+
+        <section>
+            <div class="subpage-a">
+                <div class="subpage-a-text">고양이를 키우는 게 쉬울 거라 생각했나요?</div>
+                <div class="subpage-a-slider1">
+                    <img src="img/slider1.png" alt="catslider">
+                    <img src="img/slider1.png" alt="catslider">
+                </div>
+
+                <div class="subpage-a-slider2">
+                    <img src="img/slider2.png" alt="catslider">
+                    <img src="img/slider2.png" alt="catslider">
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section>
+            <div class="subpage-b">
+                <div class="left">
+                    <!-- 로고 있는 원을 백그라운드로 깔기 -->
+                    <img src="img/catlogo.png" alt="catlogo">
+                    <ul>
+                        <li>
+                            <img src="img/circle1.png" alt="cat">
+                            <div>유기묘 문제</div>
+                        </li>
+                        <li>
+                            <img src="img/circle2.png" alt="game">
+                            <div>시뮬레이션 게임</div>
+                        </li>
+                        <li>
+                            <img src="img/circle3.png" alt="libra">
+                            <div>도덕적 판단</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="subpage-b-right">
+                    <strong>냥토피아는,</strong>
+                    <div>
+                        <p><span>유기묘 문제 <img src="img/circle1.png" alt="cat"></span>를</p>
+                        <p><span>시뮬레이션 게임 <img src="img/circle2.png" alt="game"></span>으로 구현하여</p>
+                        <p><span>도덕적 판단 <img src="img/circle3.png" alt="libra"></span>을 유발시킵니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section>
+            <div class="subpage-c">
+
+                <div class="subpage-c-text">
+                    <p class="subpage-c-title">당신의 의지와 관계없이, 고양이를 키우는 건 어렵습니다.</p>
+                    <p class="subpage-c-var">버튼을 클릭하면 각 선택에 따른 게임 엔딩을 확인할 수 있습니다.</p>
+                </div>
+
+                <div class="subpage-c-left">
+                    <button class="subpage-c-btn">다시 뽑는다</button>
+                    <button class="subpage-c-btn">키운다</button>
+
+                    <!-- 키운다 모달창 -->
+                    <div class="subpage-c-modal">
+                        <!-- 코인 -->
+                        <div class="modal-coin">
+                            <span>💰</span>
+                            <p>코인</p>
+                            <p>1,000,000원</p>
+                            <input type="range" value="100" class="coin-range" max="100">
+                        </div>
+
+                        <!-- 행복도 -->
+                        <div class="modal-love">
+                            <span>❤️</span>
+                            <p>행복도</p>
+                            <p>0%</p>
+                            <input type="range" value="0" class="love-range" max="100">
+                        </div>
+
+                        <button id="confirmBtn">확인</button>
+                    </div>
+                </div>
+
+                <!-- 결과 -->
+                <div class="modal-result" id="resultCircle">Result?</div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="subpage-d-slider-wrapper">
+
+            <div class="subpage-d-slider-track">
+
+                <!-- 첫 번째 카드 -->
+                <section class="subpage-d">
+                    <div class="subpage-d-left">
+                        <div class="main-text">고양이가 당신의 노트북에<br>물을 엎습니다.</div>
+                        <div class="sub-text">고양이가 일정 확률로 당신의 물건을 망가뜨립니다.<br>수리 비용으로 돈이 감소합니다.</div>
+                    </div>
+                    <div class="subpage-d-right">
+                        <img src="img/varslide1.png" alt="고양이와 노트북">
+                    </div>
+                </section>
+
+                <!-- 두 번째 카드 -->
+                <section class="subpage-d">
+                    <div class="subpage-d-left">
+                        <div class="main-text">커튼이 갈기갈기 찢어졌습니다.</div>
+                        <div class="sub-text">고양이가 스트레칭하다가 찢었습니다. 수선비 지출 발생.</div>
+                    </div>
+                    <div class="subpage-d-right">
+                        <img src="img/varslide2.png" alt="커튼">
+                    </div>
+                </section>
+
+                <!-- 세 번째 카드 -->
+                <section class="subpage-d">
+                    <div class="subpage-d-left">
+                        <div class="main-text">고양이가 유리컵을 떨어뜨렸습니다.</div>
+                        <div class="sub-text">깨진 유리는 위험합니다. 청소와 교체가 필요합니다.</div>
+                    </div>
+                    <div class="subpage-d-right">
+                        <img src="img/varslide3.png" alt="유리컵">
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- 슬라이드 버튼 -->
+            <!-- <button id="prevSlide">◀</button>
+  <button id="nextSlide">▶</button> -->
+
+        </section>
+
+
+
+
+
+        <section>
+            <div class="subpage-e">
+                <div class="title">
+                    <img src="img/textlogo.png" alt="textlogo" class="textlogo">
+                    <p>더 이상 무책임하게 유기되는 고양이들이 없어지기를 바랍니다.</p>
+                </div>
+
+
+                <div class="fakefooter">
+                    <img src="img/footer.png" alt="footer">
+                </div>
+
+            </div>
+
+
+            <!-- <div class="fakefooter">
+                <p>계원예술대학교 디지털미디어디자인과 디지털콘텐츠제작 교과목 뉴미디어 프로젝트: 냥토피아</p>
+                <hr>
+                <p>Copyright ©️ 2025 팀 언뇽허삽나까(김서현, 남서연, 황유진). All rights reserved.</p>
+            </div> -->
+
+
+
+        </section>
+
+        <footer></footer>
+
+</body>
+
+</html>
