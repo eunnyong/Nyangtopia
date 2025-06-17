@@ -118,6 +118,7 @@ body {
   padding: 0.3125rem 2.5rem;
   font-weight: 500;
   font-size: 2rem;
+  font-family: 'Galmuri9'
 }
 
 .coin-box {
@@ -150,6 +151,7 @@ body {
   font-weight: 500;
   margin-top: auto;
   font-size: 1.8rem;
+  font-family: 'Galmuri9'
 }
 
 .choice {
